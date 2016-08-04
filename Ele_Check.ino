@@ -106,7 +106,7 @@ void loop() {
 			MCP_t = millis();
 		}
 		if (millis() - BT_t > BT_l) {
-			strcpy(SendData, "BATTERY:000001||888888||");
+			strcpy(SendData, "BATTERY||000001||888888||");
 			strcat(SendData, FtoA(Battery.ALL.Voltage));
 			strcat(SendData, "||");
 			strcat(SendData, FtoA(Battery.Bat1.Voltage));
@@ -130,10 +130,10 @@ void loop() {
 			strcat(SendData, tmpchar);
 			strcat(SendData, "||");
 			strcat(SendData,
-					GPSData.latitude[0] == '\0' ? "" : GPSData.latitude);
+					GPSData.latitude[0] == '\0' ? "Null" : GPSData.latitude);
 			strcat(SendData, "||");
 			strcat(SendData,
-					GPSData.longitude[0] == '\0' ? "" : GPSData.longitude);
+					GPSData.longitude[0] == '\0' ? "Null" : GPSData.longitude);
 			strcat(SendData, "||");
 			strcat(SendData, FtoA(Temperture));
 			strcat(SendData, "||");
