@@ -87,7 +87,7 @@ void loop() {
 			strcat(SendData, "||");
 			strcat(SendData, FtoA(Temperture));
 			strcat(SendData, "||");
-			strcat(SendData, FtoA(EEPROMData.CurrentBatteryPower));
+			strcat(SendData, FtoA(9.853));
 			strcat(SendData, "||");
 			strcat(SendData, Safe == 1 ? "1" : "0");
 			strcat(SendData, ":END");
@@ -137,7 +137,7 @@ void loop() {
 			strcat(SendData, "||");
 			strcat(SendData, FtoA(Temperture));
 			strcat(SendData, "||");
-			strcat(SendData, FtoA(EEPROMData.CurrentBatteryPower));
+			strcat(SendData, FtoA(9.853));
 			strcat(SendData, "||");
 			strcat(SendData, Safe == 1 ? "1" : "0");
 			strcat(SendData, ":END");
